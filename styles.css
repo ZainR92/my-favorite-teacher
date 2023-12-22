@@ -221,7 +221,7 @@ header.sticky {
 
 .categories-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
   gap: 1.5rem;
   align-items: center;
   cursor: pointer;
@@ -293,11 +293,12 @@ header.sticky {
 
 .courses-content {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+  gap: 1.5rem;
   align-items: center;
-  margin-top: 4rem;
   cursor: pointer;
+  text-align: center;
+  margin-top: 4rem;
   border-radius: 15px;
 }
 
@@ -478,7 +479,7 @@ header.sticky {
     transition: 0.2s;
   }
   section {
-    padding: 70px;
+    padding: 40px;
     transition: 0.2s;
   }
   .container {
@@ -535,6 +536,9 @@ header.sticky {
 }
 
 @media (max-width: 890px) {
+  .navbar {
+    width: 200px;
+  }
   .home {
     height: 150vh;
     grid-template-columns: 1fr;
@@ -557,7 +561,29 @@ header.sticky {
 }
 
 @media (max-width: 600px) {
+  :root {
+    --big-font: 2rem;
+    --h2-font: 1rem;
+    --p-font: 0.5rem;
+    transition: 0.1s;
+  }
   .home {
     height: 120vh;
+  }
+  .home-img img {
+    height: auto;
+    width: 80%;
+  }
+  .container {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+  .categories-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
+  }
+  .box {
+    padding: 10px 20px;
+  }
+  .courses-content {
+    grid-template-columns: repeat(auto-fit, minmax(200px, auto));
   }
 }
